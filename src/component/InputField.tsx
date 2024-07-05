@@ -5,11 +5,20 @@ interface Prop {
   type: string;
   level: string;
   step?: string;
+  placeholder?: string;
   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-const InputField = ({ value, name, type, handleChange, level, step }: Prop) => {
+const InputField = ({
+  value,
+  name,
+  type,
+  handleChange,
+  level,
+  step,
+  placeholder,
+}: Prop) => {
   return (
-    <>
+    <div className="">
       <label className="block my-2">
         {level}
         <input
@@ -18,10 +27,11 @@ const InputField = ({ value, name, type, handleChange, level, step }: Prop) => {
           value={value}
           step={type === "number" ? step : ""}
           onChange={handleChange}
-          className=" w-full mt-1 p-4 border rounded"
+          placeholder={placeholder}
+          className=" w-full mt-1 p-2 border rounded bg-transparent "
         />
       </label>
-    </>
+    </div>
   );
 };
 

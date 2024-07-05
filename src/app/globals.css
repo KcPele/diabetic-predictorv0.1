@@ -31,3 +31,11 @@ body {
     text-wrap: balance;
   }
 }
+
+/* input,
+select {
+  padding: 5px;
+  background: transparent;
+  border: white 1px solid;
+  border-radius: 8px;
+} */
